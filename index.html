@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Zone</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="store-name">
+            <img src="logo1.png" alt="Logo de la tienda">
+            <h1>GAME ZONE</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-section="catalogo">Catálogo</a></li>
+                <li><a href="#" class="nav-link" data-section="ubicacion">Ubícanos</a></li>
+                <li><a href="#" class="nav-link" data-section="torneos">Torneos</a></li>
+                <li><a href="#" class="nav-link" data-section="contacto">Contacto</a></li>
+                <li><a href="#" class="nav-link" data-section="game">Game</a></li>
+                <li><a href="#" class="nav-link" data-section="about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="catalogo" class="section active">
+            <div class="games-container">
+                <div class="game">
+                    <img src="astrobot.png" alt="AstroBot">
+                    <h2>ASTROBOT (PS5)</h2>
+                    <p>S/290.00</p>
+                </div>
+                <div class="game">
+                    <img src="spiderman.jpg" alt="Marvel Spider-Man">
+                    <h2>MARVEL SPIDER-MAN (PS4)</h2>
+                    <p>S/150.00</p>
+                </div>
+                <div class="game">
+                    <img src="fc25 ps5.jpg" alt="EA FC 25">
+                    <h2>EA FC 25 (PS5)</h2>
+                    <p>S/250.00</p>
+                </div>
+                <div class="game">
+                    <img src="gowr.jpg" alt="GOD OF WAR RAGNAROK">
+                    <h2>GOD OF WAR RAGNAROK (PS5)</h2>
+                    <p>S/170.00</p>
+                </div>
+                <div class="game">
+                    <img src="tlou.webp" alt="The Last of Us part 2 remastered (ps5)">
+                    <h2>The Last of Us remastered (PS5)</h2>
+                    <p>S/190.00</p>
+                </div>
+                <div class="game">
+                    <img src="spiderman2.jpg" alt="Spider-Man 2">
+                    <h2>Marvel Spider-Man 2 (PS5)</h2>
+                    <p>S/200.00</p>
+                </div>
+                <div class="game">
+                    <img src="mk1.webp" alt="Mortal Kombat 1">
+                    <h2>Mortal Kombat 1</h2>
+                    <p>S/200.00</p>
+                </div>
+                <div class="game">
+                    <img src="db.jpg" alt="Dragon Ball Sparking Zero">
+                    <h2>Dragon Ball Sparking Zero</h2>
+                    <p>S/250.00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="game" class="section">
+            <div class="game-container">
+                <h2>Game = Garbage Collector</h2>
+                <div class="game-info">
+                    <p>Tiempo: <span id="time">60</span>s</p>
+                    <p>Basura recolectada: <span id="collected">0</span></p>
+                    <p>Nivel: <span id="level">1</span></p>
+                </div>
+                <div class="game-board" id="gameBoard"></div>
+                <button id="startGame">Comenzar Juego</button>
+            </div>
+        </section>
+        <section id="torneos" class="section">
+            <div class="torneos-container">
+                <h2>Inscríbete en nuestros torneos</h2>
+                <form id="registroForm" class="form-torneo">
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="nacimiento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="torneo">Torneo:</label>
+                        <select id="torneo" required>
+                            <option value="">Seleccione un torneo</option>
+                            <option value="Fornite" data-precio="50">Fornite - S/50</option>
+                            <option value="League of Legends" data-precio="60">League of Legends - S/60</option>
+                            <option value="Dota 2" data-precio="70">Dota 2 - S/70</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pago">Pago realizado (S/):</label>
+                        <input type="number" id="pago" min="0" step="0.01" required>
+                    </div>
+                    <button type="submit">Inscribirse</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="ubicacion" class="section">
+            <div class="ubicacion-container">
+                <h2>Ubícanos</h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d579.9439241007374!2d-76.97382980299106!3d-12.08597096720681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7ee4efb8e21%3A0x2509617adc638a91!2sJockey%20Plaza.!5e0!3m2!1ses-419!2spe!4v1742679352160!5m2!1ses-419!2spe" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="contacto-container">
+                <h2>Contacto</h2>
+                <form class="contacto-form">
+                    <div class="form-group">
+                        <label for="contacto-nombre">Nombre:</label>
+                        <input type="text" id="contacto-nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contacto-email">Correo electrónico:</label>
+                        <input type="email" id="contacto-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contacto-mensaje">Mensaje:</label>
+                        <textarea id="contacto-mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="about-box">
+                <h2>ACERCA DE GAMEZONE</h2>
+                <div class="about-content">
+                    <p>GameZone es la plataforma en organización de torneos de esports en Perú. Fundada en 2022 por apasionados del gaming, nos dedicamos a crear experiencias competitivas de alta calidad para jugadores de todos los niveles.</p>
+                    <p>Nuestra misión es fomentar el crecimiento de la comunidad gamer peruana a través de competencias justas, premios atractivos y un ambiente de sana competencia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="rights">
+            <p>&copy; 2025 Game Zone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
